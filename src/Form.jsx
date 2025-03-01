@@ -13,7 +13,7 @@ export default function Form({ onAddItems }) {
     const newItem = {
       description,
       quantity,
-      package: false,
+      packed: false,
       id: uuidv4(),
     };
 
