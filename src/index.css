@@ -20,21 +20,22 @@ html {
 body {
   font-size: 2.4rem;
   font-family: sans-serif;
-  color: #5a3e2b;
+  color: #0a1128;
   font-family: "Quicksand";
   font-weight: 500;
 }
 
 .app {
   width: 100%;
-  height: 100vh;
+  height: 95vh;
   display: grid;
   grid-template-rows: auto auto 1fr auto;
 }
 
 h1 {
   text-align: center;
-  background-color: #f4a226;
+  color: #f1faee;
+  background-color: #1d3557;
   font-family: "Monoton";
   font-size: 8rem;
   text-transform: uppercase;
@@ -45,7 +46,7 @@ h1 {
 }
 
 .add-form {
-  background-color: #e5771f;
+  background-color: #457b9d;
   padding: 2.8rem 0;
   display: flex;
   align-items: center;
@@ -86,8 +87,7 @@ input {
 }
 
 .list {
-  background-color: #5a3e2b;
-  color: #ffebb3;
+  background-color: #a8dadc;
   padding: 4rem 0;
 
   display: flex;
@@ -109,17 +109,37 @@ input {
 .option {
   font-family: sans-serif;
 }
-
 .list ul {
   list-style: none;
   width: 80%;
-  overflow: scroll;
+  height: 35vh;
 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.2rem;
   justify-content: center;
   align-content: start;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 1rem;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 2px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #1d3557;
+    border-radius: 2px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #f1faee;
+  }
 }
 
 .list li {
@@ -152,7 +172,7 @@ input[type="checkbox"] {
 }
 
 .stats {
-  background-color: #76c7ad;
+  background-color: #457b9d;
   text-align: center;
   font-weight: 700;
   padding: 3.2rem 0;
